@@ -39,7 +39,7 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game() {
+/*function game() {
   for (let i = 0; i < 5; i++) {
     let playerSelection = prompt("Choose wisely!");
     const computerSelection = computerPlay();
@@ -48,7 +48,7 @@ function game() {
     const computer = " Computer Score: " + computerScore;
     console.log(player);
     console.log(computer);
-  }
+  } 
 
   if (playerScore > computerScore) {
     console.log("You have won this best of 5!!!");
@@ -57,7 +57,7 @@ function game() {
     console.log("You have lost this best of 5");
   } else {
     console.log("TIE! Best of 5");
-  }
+  } 
 }
 
-game();
+game(); */
