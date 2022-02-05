@@ -36,6 +36,9 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+console.log(playerScore);
+console.log(computerScore);
+
 /*Results*/
 
 const results = document.querySelector("#results");
@@ -66,8 +69,6 @@ scissors.addEventListener("click", function (computerSelection) {
 
 const playerResult = document.createElement("h4");
 playerResult.textContent = "Player score: " + playerScore;
-console.log(playerScore);
-console.log(computerScore);
 
 const computerResult = document.createElement("h4");
 computerResult.textContent = "Computer Score: " + computerScore;
