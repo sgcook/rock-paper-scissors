@@ -36,30 +36,6 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-<<<<<<< HEAD
-/*function game() {
-  for (let i = 0; i < 5; i++) {
-    let playerSelection = prompt("Choose wisely!");
-    const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-    const player = "Player Score: " + playerScore;
-    const computer = " Computer Score: " + computerScore;
-    console.log(player);
-    console.log(computer);
-  } 
-
-  if (playerScore > computerScore) {
-    console.log("You have won this best of 5!!!");
-  }
-  if (playerScore < computerScore) {
-    console.log("You have lost this best of 5");
-  } else {
-    console.log("TIE! Best of 5");
-  } 
-}
-
-game(); */
-=======
 /*Results*/
 
 const results = document.querySelector("#results");
@@ -113,4 +89,3 @@ results.appendChild(round);
 results.appendChild(computerResult);
 results.appendChild(playerResult);
 results.appendChild(result);
->>>>>>> rps-ui
