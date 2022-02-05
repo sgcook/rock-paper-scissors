@@ -89,21 +89,3 @@ results.appendChild(round);
 results.appendChild(computerResult);
 results.appendChild(playerResult);
 results.appendChild(result);
-
-/*function game() {
-  for (let i = 0; i < 5; i++) {
-    console.log(playerScore);
-    console.log(computerScore);
-  }
-
-  if (playerScore > computerScore) {
-    console.log("You have won this best of 5!!!");
-  }
-  if (playerScore < computerScore) {
-    console.log("You have lost this best of 5");
-  } else {
-    console.log("TIE! Best of 5");
-  }
-}
-
-game();*/
