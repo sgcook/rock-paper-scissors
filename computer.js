@@ -36,53 +36,67 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-console.log(playerScore);
-console.log(computerScore);
-
 /*Results*/
 
 const results = document.querySelector("#results");
 
 let round = document.createElement("p");
 
-/*Player Selection*/
-const rock = document.getElementById("btnRock");
-rock.addEventListener("click", function (computerSelection) {
-  let playerSelection = "rock";
+function game(playerSelection, computerSelection) {
   computerSelection = computerPlay();
   round.textContent = playRound(playerSelection, computerSelection);
+  playerResult.textContent = "Player score: " + playerScore;
+  computerResult.textContent = "Computer Score: " + computerScore;
+  if (playerScore === 5) {
+    result.textContent = "You have beaten the computer!!";
+    playerScore = 0;
+    computerScore = 0;
+  } else if (computerScore === 5) {
+    result.textContent = "The computer has beaten you!!";
+    playerScore = 0;
+    computerScore = 0;
+  }
+}
+
+/*Player Selection*/
+const rock = document.getElementById("btnRock");
+rock.addEventListener("click", function () {
+  let playerSelection = "rock";
+  result.textContent = "";
+  game(playerSelection, computerSelection);
 });
 
 const paper = document.getElementById("btnPaper");
 paper.addEventListener("click", function (computerSelection) {
   let playerSelection = "paper";
-  computerSelection = computerPlay();
-  round.textContent = playRound(playerSelection, computerSelection);
+  result.textContent = "";
+  game(playerSelection, computerSelection);
 });
 
 const scissors = document.getElementById("btnScissors");
 scissors.addEventListener("click", function (computerSelection) {
   let playerSelection = "scissors";
-  computerSelection = computerPlay();
-  round.textContent = playRound(playerSelection, computerSelection);
+  result.textContent = "";
+  game(playerSelection, computerSelection);
 });
 
 const playerResult = document.createElement("h4");
-playerResult.textContent = "Player score: " + playerScore;
 
 const computerResult = document.createElement("h4");
-computerResult.textContent = "Computer Score: " + computerScore;
+const result = document.createElement("h1");
 
 results.appendChild(round);
-
 results.appendChild(computerResult);
 results.appendChild(playerResult);
+results.appendChild(result);
 
 /*function game() {
   for (let i = 0; i < 5; i++) {
-  //}
+    console.log(playerScore);
+    console.log(computerScore);
+  }
 
-   if (playerScore > computerScore) {
+  if (playerScore > computerScore) {
     console.log("You have won this best of 5!!!");
   }
   if (playerScore < computerScore) {
